@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2921F235-0D1C-4217-8FFE-236836A81085}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F9230CBA-16FF-43B9-AC77-E9207AF744B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargeStation.WebApi", "src\ChargeStation.WebApi\ChargeStation.WebApi.csproj", "{48D509E5-7B64-4C10-830F-88B779E979D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Application", "src\ChargeStation.Application\ChargeStation.Application.csproj", "{C4B6A348-F527-43EC-B02A-C28503C5F772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Domain", "src\ChargeStation.Domain\ChargeStation.Domain.csproj", "{986347A2-5228-4A24-90A5-AD9AD7B82757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Infrastructure", "src\ChargeStation.Infrastructure\ChargeStation.Infrastructure.csproj", "{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48D509E5-7B64-4C10-830F-88B779E979D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D509E5-7B64-4C10-830F-88B779E979D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D509E5-7B64-4C10-830F-88B779E979D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D509E5-7B64-4C10-830F-88B779E979D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B6A348-F527-43EC-B02A-C28503C5F772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B6A348-F527-43EC-B02A-C28503C5F772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B6A348-F527-43EC-B02A-C28503C5F772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B6A348-F527-43EC-B02A-C28503C5F772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986347A2-5228-4A24-90A5-AD9AD7B82757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986347A2-5228-4A24-90A5-AD9AD7B82757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986347A2-5228-4A24-90A5-AD9AD7B82757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986347A2-5228-4A24-90A5-AD9AD7B82757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48D509E5-7B64-4C10-830F-88B779E979D3} = {2921F235-0D1C-4217-8FFE-236836A81085}
+		{C4B6A348-F527-43EC-B02A-C28503C5F772} = {2921F235-0D1C-4217-8FFE-236836A81085}
+		{986347A2-5228-4A24-90A5-AD9AD7B82757} = {2921F235-0D1C-4217-8FFE-236836A81085}
+		{BFFAFE52-2C25-4730-9DFA-AF293C4D866E} = {2921F235-0D1C-4217-8FFE-236836A81085}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B7D6F24-DBB1-459B-81F7-C734E261861F}
+	EndGlobalSection
+EndGlobal
