@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChargeStation.Domain.Common
 {
-    public abstract class BaseEvent : INotification
+    public abstract class DomainEvent : INotification
     {
     }
 }
