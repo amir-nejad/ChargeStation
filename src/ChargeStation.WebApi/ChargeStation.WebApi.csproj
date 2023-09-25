@@ -21,4 +21,9 @@
     <ProjectReference Include="..\ChargeStation.Infrastructure\ChargeStation.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Dtos\ChargeStation\" />
+    <Folder Include="Models\Dtos\Connectors\" />
+  </ItemGroup>
+
 </Project>
