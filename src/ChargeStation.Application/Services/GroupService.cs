@@ -39,18 +39,14 @@ namespace ChargeStation.Application.Services
         public async Task<GroupEntity> GetGroupByIdAsync(int id)
         {
             return await _repository
-                .GetByIdAsync(id, x => 
-                    x.ChargeStations,
-                    x => x.ChargeStations.Select(c => c.Connectors));
+                .GetByIdAsync(id, x => x.ChargeStations);
         }
 
         // Get list
         public async Task<IList<GroupEntity>> GetGroupsAsync()
         {
             return (IList<GroupEntity>)await _repository
-                .GetAllAsync(x => 
-                    x.ChargeStations, 
-                    x => x.ChargeStations.Select(c => c.Connectors));
+                .GetAllAsync(x => x.ChargeStations);
         }
 
         // Update

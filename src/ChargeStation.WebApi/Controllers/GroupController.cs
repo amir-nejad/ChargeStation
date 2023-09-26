@@ -1,41 +1,43 @@
 ﻿using ChargeStation.Application.Interfaces;
+using ChargeStation.Application.Services;
 using ChargeStation.Domain.Entities;
 using ChargeStation.WebApi.Models.Dtos.Group;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using System;
 using System.Threading.Tasks;
 
 namespace ChargeStation.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class GroupController : ControllerBase
     {
-        private readonly IGroupService _groupSerice;
+        private readonly IGroupService _groupService;
         private readonly ILogger _logger;
 
         public GroupController(IGroupService groupService, ILogger logger)
         {
-            _groupSerice = groupService;
+            _groupService = groupService;
             _logger = logger;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetGroupsAsync()
         {
-            return Ok(await _groupSerice.GetGroupsAsync());
+            return Ok(await _groupService.GetGroupsAsync());
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetGroupById(int? id)
+        [HttpGet("{id?}")]
+        public async Task<IActionResult> GetGroupAsync(int? id)
         {
             if (id is null)
                 return BadRequest();
 
             var response = new GroupDto();
 
-            var groupEntity = await _groupSerice.GetGroupByIdAsync(id.Value);
+            var groupEntity = await _groupService.GetGroupByIdAsync(id.Value);
 
             if (groupEntity is null)
             {
@@ -49,6 +51,8 @@ namespace ChargeStation.WebApi.Controllers
             response.AmpsCapacity = groupEntity.AmpsCapacity;
             response.CreatedDateUtc = groupEntity.CreatedDateUtc;
             response.LastModifiedDateUtc = groupEntity.LastModifiedDateUtc;
+
+            return Ok(response);
         }
 
         [HttpPost]
@@ -62,7 +66,7 @@ namespace ChargeStation.WebApi.Controllers
 
             var response = new CreateUpdateGroupResponseDto();
 
-            await _groupSerice.CreateGroupAsync(groupEntity);
+            await _groupService.CreateGroupAsync(groupEntity);
 
             if (groupEntity.Id == 0)
             {
@@ -98,7 +102,7 @@ namespace ChargeStation.WebApi.Controllers
                 CreatedDateUtc = group.CreatedDateUtc.GetValueOrDefault()
             };
 
-            await _groupSerice.UpdateGroupAsync(groupEntity);
+            await _groupService.UpdateGroupAsync(groupEntity);
 
             if (groupEntity is null)
             {
@@ -113,7 +117,51 @@ namespace ChargeStation.WebApi.Controllers
             response.Success = true;
             response.Group = group;
 
-            return Ok();
+            return Ok(response);
+        }
+
+        [HttpDelete("{id?}")]
+        public async Task<IActionResult> DeleteGroupAsync(int? id)
+        {
+            if (!id.HasValue)
+                return BadRequest();
+
+            var response = new DeleteGroupResponseDto();
+
+            try
+            {
+                var deleteTask = _groupService.DeleteGroupAsync(id.Value);
+                await deleteTask; // Wait for the task to complete
+
+                if (deleteTask.Status == TaskStatus.RanToCompletion)
+                {
+                    response.Success = true;
+                    return Ok(response); // Task completed successfully
+                }
+                else if (deleteTask.Status == TaskStatus.Faulted)
+                {
+                    Response.StatusCode = StatusCodes.Status500InternalServerError;
+                    response.Success = false;
+                    response.Message = "An error occurred while processing the request.";
+
+                    return new JsonResult(response); // Task faulted (exception occurred)
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                // Handle cancellation if needed
+                Response.StatusCode = StatusCodes.Status500InternalServerError;
+                response.Success = false;
+                response.Message = "The operation was canceled.";
+
+                return new JsonResult(response);
+            }
+
+            Response.StatusCode = StatusCodes.Status500InternalServerError;
+            response.Success = false;
+            response.Message = "An unknown error occurred.";
+
+            return new JsonResult(response);
         }
     }
 }

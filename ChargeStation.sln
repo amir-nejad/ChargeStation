@@ -9,11 +9,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F9230CBA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargeStation.WebApi", "src\ChargeStation.WebApi\ChargeStation.WebApi.csproj", "{48D509E5-7B64-4C10-830F-88B779E979D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Application", "src\ChargeStation.Application\ChargeStation.Application.csproj", "{C4B6A348-F527-43EC-B02A-C28503C5F772}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargeStation.Application", "src\ChargeStation.Application\ChargeStation.Application.csproj", "{C4B6A348-F527-43EC-B02A-C28503C5F772}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Domain", "src\ChargeStation.Domain\ChargeStation.Domain.csproj", "{986347A2-5228-4A24-90A5-AD9AD7B82757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargeStation.Domain", "src\ChargeStation.Domain\ChargeStation.Domain.csproj", "{986347A2-5228-4A24-90A5-AD9AD7B82757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChargeStation.Infrastructure", "src\ChargeStation.Infrastructure\ChargeStation.Infrastructure.csproj", "{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChargeStation.Infrastructure", "src\ChargeStation.Infrastructure\ChargeStation.Infrastructure.csproj", "{BFFAFE52-2C25-4730-9DFA-AF293C4D866E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24F95F0C-FFE5-448B-8C20-28932572072B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

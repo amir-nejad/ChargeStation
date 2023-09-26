@@ -1,0 +1,731 @@
+2023-09-26 21:46:46.892 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 21:46:47.075 +03:30 [INF] Hosting environment: Development
+2023-09-26 21:46:47.077 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 21:46:47.103 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger - -
+2023-09-26 21:46:47.935 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger - - - 301 - - 836.7712ms
+2023-09-26 21:46:47.952 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 21:46:50.796 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 2843.6530ms
+2023-09-26 21:46:50.813 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/swagger-ui.css - -
+2023-09-26 21:46:50.815 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/swagger-ui-bundle.js - -
+2023-09-26 21:46:50.816 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/swagger-ui-standalone-preset.js - -
+2023-09-26 21:46:50.830 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 21:46:50.843 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 12.1922ms
+2023-09-26 21:46:50.957 +03:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-09-26 21:46:50.957 +03:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-09-26 21:46:50.961 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/swagger-ui.css - - - 200 142933 text/css 147.9240ms
+2023-09-26 21:46:50.965 +03:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-09-26 21:46:50.973 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 155.5111ms
+2023-09-26 21:46:51.026 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 210.8773ms
+2023-09-26 21:46:53.265 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 21:46:54.366 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1101.0376ms
+2023-09-26 21:46:54.778 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/favicon-32x32.png - -
+2023-09-26 21:46:54.781 +03:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-09-26 21:46:54.782 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/favicon-32x32.png - - - 200 628 image/png 4.2623ms
+2023-09-26 21:55:11.224 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 21:55:11.459 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 21:55:11.545 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 21:55:13.341 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 21:55:14.340 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 21:55:15.660 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 4108.47ms
+2023-09-26 21:55:15.665 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 21:55:15.668 +03:30 [ERR] HTTP GET /Group/GetGroups responded 500 in 4390.2906 ms
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors)' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 21:55:16.200 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors)' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 21:55:16.382 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 500 - text/plain 5162.6639ms
+2023-09-26 22:07:58.885 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 22:07:58.940 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 22:07:58.969 +03:30 [INF] Hosting environment: Development
+2023-09-26 22:07:58.970 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 22:08:00.490 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 1551.9664ms
+2023-09-26 22:08:01.077 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 22:08:01.153 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 525.7268ms
+2023-09-26 22:08:03.995 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 22:08:09.174 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5178.9134ms
+2023-09-26 22:13:03.158 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:13:03.259 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:13:03.322 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:13:03.819 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:13:17.765 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:13:30.173 +03:30 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+FROM [Groups] AS [g]
+2023-09-26 22:13:31.718 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+FROM [Groups] AS [g]
+2023-09-26 22:13:48.450 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 45116.838ms
+2023-09-26 22:13:48.468 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:13:48.486 +03:30 [ERR] HTTP GET /Group/GetGroups responded 500 in 45307.3416 ms
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors).FirstOrDefault()' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 22:13:48.703 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors).FirstOrDefault()' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 22:13:48.931 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 500 - text/plain 45773.7354ms
+2023-09-26 22:28:09.529 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 22:28:09.584 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 22:28:09.604 +03:30 [INF] Hosting environment: Development
+2023-09-26 22:28:09.605 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 22:28:10.659 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 22:28:10.661 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 1053.3093ms
+2023-09-26 22:28:10.691 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 29.1000ms
+2023-09-26 22:28:10.872 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 22:28:11.719 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 846.7513ms
+2023-09-26 22:28:13.060 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 22:28:13.992 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 932.7941ms
+2023-09-26 22:28:24.467 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:28:24.531 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:28:24.566 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:28:24.868 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:28:33.734 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:28:43.777 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 19204.4091ms
+2023-09-26 22:28:43.784 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:28:43.792 +03:30 [ERR] HTTP GET /Group/GetGroups responded 500 in 19316.8184 ms
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(cs => cs.Connectors).ToList()' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 22:28:43.910 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(cs => cs.Connectors).ToList()' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 22:28:43.931 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 500 - text/plain 19463.8305ms
+2023-09-26 22:30:37.274 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 22:30:37.338 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 22:30:37.374 +03:30 [INF] Hosting environment: Development
+2023-09-26 22:30:37.375 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 22:30:37.959 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 600.8652ms
+2023-09-26 22:30:39.018 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 22:30:39.029 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 22:30:39.155 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 132.4365ms
+2023-09-26 22:30:40.339 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1309.0480ms
+2023-09-26 22:30:41.999 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 22:30:43.245 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1246.0448ms
+2023-09-26 22:30:49.056 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:30:49.129 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:30:49.181 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:30:49.683 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:30:58.585 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:31:07.733 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 18544.2556ms
+2023-09-26 22:31:07.743 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:31:07.753 +03:30 [ERR] HTTP GET /Group/GetGroups responded 500 in 18690.2707 ms
+System.InvalidOperationException: The expression '"ChargeStations.Connectors"' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 22:31:07.938 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The expression '"ChargeStations.Connectors"' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetAllAsync(Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 49
+   at ChargeStation.Application.Services.GroupService.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 50
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync() in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 22:31:07.974 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 500 - text/plain 18918.2875ms
+2023-09-26 22:31:50.195 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 22:31:50.319 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 22:31:50.357 +03:30 [INF] Hosting environment: Development
+2023-09-26 22:31:50.358 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 22:31:51.491 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 22:31:51.500 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 1169.2106ms
+2023-09-26 22:31:51.532 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 40.3987ms
+2023-09-26 22:31:51.929 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 22:31:52.059 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 129.6348ms
+2023-09-26 22:31:54.936 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 22:31:55.467 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 531.7462ms
+2023-09-26 22:32:02.057 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:32:02.114 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:32:02.166 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:32:02.558 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:32:09.037 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:32:13.415 +03:30 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM [Groups] AS [g]
+LEFT JOIN [ChargeStations] AS [c] ON [g].[Id] = [c].[GroupId]
+ORDER BY [g].[Id], [c].[Id]
+2023-09-26 22:32:19.000 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16424.9025ms.
+2023-09-26 22:32:19.035 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.GroupEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 22:32:19.074 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 16897.8098ms
+2023-09-26 22:32:19.075 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:32:19.080 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 17015.5688 ms
+2023-09-26 22:32:19.089 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 17032.5498ms
+2023-09-26 22:33:37.239 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 132
+2023-09-26 22:33:37.251 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:33:37.277 +03:30 [INF] Route matched with {action = "CreateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:33:37.420 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:33:52.166 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:33:53.022 +03:30 [INF] Executed DbCommand (145ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([AmpsCapacity], [CreatedDateUtc], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 22:34:10.226 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32805.4961ms.
+2023-09-26 22:34:10.227 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.CreateUpdateGroupResponseDto'.
+2023-09-26 22:34:13.339 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) in 36062.1198ms
+2023-09-26 22:34:13.340 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:34:13.340 +03:30 [INF] HTTP POST /Group/CreateGroup responded 200 in 36092.6956 ms
+2023-09-26 22:34:13.341 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 132 - 200 - application/json;+charset=utf-8 36101.5761ms
+2023-09-26 22:34:46.759 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - -
+2023-09-26 22:34:46.761 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:34:46.774 +03:30 [INF] Route matched with {action = "GetGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:34:46.802 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:34:46.815 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:34:47.067 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) in 292.0231ms
+2023-09-26 22:34:47.069 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:34:47.070 +03:30 [ERR] HTTP GET /Group/GetGroup/1 responded 500 in 309.2779 ms
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors)' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetByIdAsync(Int32 id, Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 33
+   at ChargeStation.Application.Services.GroupService.GetGroupByIdAsync(Int32 id) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 41
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync(Nullable`1 id) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 22:34:47.244 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The expression 'x.ChargeStations.AsQueryable().Select(c => c.Connectors)' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.<ProcessInclude>g__ExtractIncludeFilter|31_0(Expression currentExpression, Expression includeExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.GetByIdAsync(Int32 id, Expression`1[] includeExpressions) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 33
+   at ChargeStation.Application.Services.GroupService.GetGroupByIdAsync(Int32 id) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\GroupService.cs:line 41
+   at ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync(Nullable`1 id) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi\Controllers\GroupController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 22:34:47.277 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - - - 500 - text/plain 517.8939ms
+2023-09-26 22:35:30.138 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - -
+2023-09-26 22:35:30.139 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:35:30.149 +03:30 [INF] Route matched with {action = "GetGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:35:30.182 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:35:30.188 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:35:30.485 +03:30 [INF] Executed DbCommand (253ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 22:35:30.497 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 314.8912ms.
+2023-09-26 22:35:30.497 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.GroupDto'.
+2023-09-26 22:35:30.498 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) in 348.9142ms
+2023-09-26 22:35:30.498 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:35:30.498 +03:30 [INF] HTTP GET /Group/GetGroup/1 responded 200 in 359.1770 ms
+2023-09-26 22:35:30.507 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - - - 200 - application/json;+charset=utf-8 370.5264ms
+2023-09-26 22:36:36.213 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 112
+2023-09-26 22:36:36.223 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:36:36.237 +03:30 [INF] Route matched with {action = "UpdateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:36:36.297 +03:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-09-26 22:36:36.311 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi) in 74.186ms
+2023-09-26 22:36:36.312 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:36:36.313 +03:30 [INF] HTTP PUT /Group/UpdateGroup responded 400 in 90.3386 ms
+2023-09-26 22:36:36.322 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 112 - 400 - application/problem+json;+charset=utf-8 109.4389ms
+2023-09-26 22:36:47.172 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 145
+2023-09-26 22:36:47.174 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:36:47.185 +03:30 [INF] Route matched with {action = "UpdateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:36:47.216 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:37:22.052 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:37:22.115 +03:30 [INF] Executed DbCommand (36ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Groups] SET [AmpsCapacity] = @p0, [CreatedDateUtc] = @p1, [LastModifiedDateUtc] = @p2, [Name] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2023-09-26 22:37:27.525 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkResult in 40308.9283ms.
+2023-09-26 22:37:27.541 +03:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2023-09-26 22:37:27.541 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi) in 40356.4468ms
+2023-09-26 22:37:27.542 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:37:27.542 +03:30 [INF] HTTP PUT /Group/UpdateGroup responded 200 in 40368.0994 ms
+2023-09-26 22:37:27.636 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 145 - 200 - - 40464.0479ms
+2023-09-26 22:37:49.556 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - -
+2023-09-26 22:37:49.558 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:37:49.570 +03:30 [INF] Route matched with {action = "GetGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:37:49.709 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:37:49.710 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:37:49.734 +03:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 22:37:49.744 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.4521ms.
+2023-09-26 22:37:49.746 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.GroupDto'.
+2023-09-26 22:37:49.758 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) in 187.9613ms
+2023-09-26 22:37:49.758 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:37:49.759 +03:30 [INF] HTTP GET /Group/GetGroup/1 responded 200 in 200.6117 ms
+2023-09-26 22:37:49.772 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - - - 200 - application/json;+charset=utf-8 216.2428ms
+2023-09-26 22:38:06.516 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 145
+2023-09-26 22:38:06.516 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:06.517 +03:30 [INF] Route matched with {action = "UpdateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:38:06.550 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:38:08.655 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:38:08.661 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Groups] SET [AmpsCapacity] = @p0, [CreatedDateUtc] = @p1, [LastModifiedDateUtc] = @p2, [Name] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2023-09-26 22:38:08.663 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2112.6683ms.
+2023-09-26 22:38:08.663 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.CreateUpdateGroupResponseDto'.
+2023-09-26 22:38:08.664 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi) in 2147.3991ms
+2023-09-26 22:38:08.664 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.UpdateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:08.664 +03:30 [INF] HTTP PUT /Group/UpdateGroup responded 200 in 2147.9883 ms
+2023-09-26 22:38:08.665 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Group/UpdateGroup application/json 145 - 200 - application/json;+charset=utf-8 2149.5008ms
+2023-09-26 22:38:17.795 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - -
+2023-09-26 22:38:17.795 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:17.796 +03:30 [INF] Route matched with {action = "GetGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:38:17.828 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:38:17.829 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:38:17.836 +03:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 22:38:17.837 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8.3598ms.
+2023-09-26 22:38:17.837 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.GroupDto'.
+2023-09-26 22:38:17.838 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi) in 41.5655ms
+2023-09-26 22:38:17.838 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:17.838 +03:30 [INF] HTTP GET /Group/GetGroup/1 responded 200 in 43.1187 ms
+2023-09-26 22:38:17.840 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroup/1 - - - 200 - application/json;+charset=utf-8 44.8847ms
+2023-09-26 22:38:26.143 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/1 - -
+2023-09-26 22:38:26.143 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:26.150 +03:30 [INF] Route matched with {action = "DeleteGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:38:26.184 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:38:26.188 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:38:26.195 +03:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 22:38:26.278 +03:30 [INF] Executed DbCommand (64ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Groups]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 22:38:26.283 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 98.5935ms.
+2023-09-26 22:38:26.283 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.DeleteGroupResponseDto'.
+2023-09-26 22:38:26.284 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) in 134.5988ms
+2023-09-26 22:38:26.285 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:26.285 +03:30 [INF] HTTP DELETE /Group/DeleteGroup/1 responded 200 in 141.6120 ms
+2023-09-26 22:38:26.285 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/1 - - - 200 - application/json;+charset=utf-8 142.2831ms
+2023-09-26 22:38:34.091 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:38:34.092 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:34.092 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:38:34.121 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:38:36.062 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:38:36.072 +03:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM [Groups] AS [g]
+LEFT JOIN [ChargeStations] AS [c] ON [g].[Id] = [c].[GroupId]
+ORDER BY [g].[Id], [c].[Id]
+2023-09-26 22:38:36.073 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1951.3272ms.
+2023-09-26 22:38:36.073 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.GroupEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 22:38:36.074 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 1981.6566ms
+2023-09-26 22:38:36.074 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:36.074 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 1982.4123 ms
+2023-09-26 22:38:36.075 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 1983.2433ms
+2023-09-26 22:38:48.367 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 132
+2023-09-26 22:38:48.368 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:48.368 +03:30 [INF] Route matched with {action = "CreateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:38:48.406 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:38:57.022 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:38:57.042 +03:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([AmpsCapacity], [CreatedDateUtc], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 22:38:57.045 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8638.8102ms.
+2023-09-26 22:38:57.045 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.CreateUpdateGroupResponseDto'.
+2023-09-26 22:38:57.046 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) in 8678.4581ms
+2023-09-26 22:38:57.046 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:38:57.046 +03:30 [INF] HTTP POST /Group/CreateGroup responded 200 in 8678.8824 ms
+2023-09-26 22:38:57.047 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 132 - 200 - application/json;+charset=utf-8 8679.5708ms
+2023-09-26 22:39:07.480 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 137
+2023-09-26 22:39:07.481 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:07.482 +03:30 [INF] Route matched with {action = "CreateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:39:07.514 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:39:07.515 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:39:07.521 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([AmpsCapacity], [CreatedDateUtc], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 22:39:07.522 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.1534ms.
+2023-09-26 22:39:07.522 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.CreateUpdateGroupResponseDto'.
+2023-09-26 22:39:07.522 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) in 40.238ms
+2023-09-26 22:39:07.522 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:07.522 +03:30 [INF] HTTP POST /Group/CreateGroup responded 200 in 41.9166 ms
+2023-09-26 22:39:07.524 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 137 - 200 - application/json;+charset=utf-8 43.9709ms
+2023-09-26 22:39:16.435 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 129
+2023-09-26 22:39:16.435 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:16.435 +03:30 [INF] Route matched with {action = "CreateGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateGroupAsync(ChargeStation.WebApi.Models.Dtos.Group.GroupDto) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:39:16.483 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:39:16.484 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:39:16.493 +03:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Groups] ([AmpsCapacity], [CreatedDateUtc], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Groups]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 22:39:16.494 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.7704ms.
+2023-09-26 22:39:16.494 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.CreateUpdateGroupResponseDto'.
+2023-09-26 22:39:16.495 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi) in 59.5826ms
+2023-09-26 22:39:16.495 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.CreateGroupAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:16.495 +03:30 [INF] HTTP POST /Group/CreateGroup responded 200 in 60.3923 ms
+2023-09-26 22:39:16.496 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Group/CreateGroup application/json 129 - 200 - application/json;+charset=utf-8 61.2644ms
+2023-09-26 22:39:22.157 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 22:39:22.157 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:22.157 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 22:39:22.185 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 22:39:22.186 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 22:39:22.208 +03:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM [Groups] AS [g]
+LEFT JOIN [ChargeStations] AS [c] ON [g].[Id] = [c].[GroupId]
+ORDER BY [g].[Id], [c].[Id]
+2023-09-26 22:39:22.210 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.5561ms.
+2023-09-26 22:39:22.210 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.GroupEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 22:39:22.218 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 61.1707ms
+2023-09-26 22:39:22.219 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 22:39:22.219 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 61.5981 ms
+2023-09-26 22:39:22.219 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 62.1940ms
