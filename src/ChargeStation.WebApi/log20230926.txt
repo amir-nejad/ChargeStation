@@ -729,3 +729,1098 @@ ORDER BY [g].[Id], [c].[Id]
 2023-09-26 22:39:22.219 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
 2023-09-26 22:39:22.219 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 61.5981 ms
 2023-09-26 22:39:22.219 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 62.1940ms
+2023-09-26 23:12:07.587 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 23:12:07.643 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 23:12:07.664 +03:30 [INF] Hosting environment: Development
+2023-09-26 23:12:07.665 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 23:12:08.198 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 554.6511ms
+2023-09-26 23:12:08.200 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 23:12:08.232 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 32.9878ms
+2023-09-26 23:12:08.291 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 23:12:08.352 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.1749ms
+2023-09-26 23:12:10.030 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 23:12:11.840 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1810.1701ms
+2023-09-26 23:12:23.760 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 23:12:23.816 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:23.856 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 23:12:24.792 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:12:25.465 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:12:29.172 +03:30 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM [Groups] AS [g]
+LEFT JOIN [ChargeStations] AS [c] ON [g].[Id] = [c].[GroupId]
+ORDER BY [g].[Id], [c].[Id]
+2023-09-26 23:12:29.223 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4422.8882ms.
+2023-09-26 23:12:29.234 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.GroupEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:12:29.261 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 5398.9482ms
+2023-09-26 23:12:29.262 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:29.265 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 5497.3022 ms
+2023-09-26 23:12:29.270 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 5510.8238ms
+2023-09-26 23:12:35.872 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:12:35.876 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:35.884 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:12:35.926 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:12:35.957 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:12:35.969 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:12:35.970 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 44.0584ms.
+2023-09-26 23:12:35.970 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:12:35.971 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 87.0821ms
+2023-09-26 23:12:35.971 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:35.971 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 98.1239 ms
+2023-09-26 23:12:35.972 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 99.9031ms
+2023-09-26 23:12:42.986 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:12:42.987 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:42.990 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:12:43.029 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:12:43.040 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:12:43.062 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:12:43.063 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.212ms.
+2023-09-26 23:12:43.063 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:12:43.064 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 74.001ms
+2023-09-26 23:12:43.064 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:12:43.064 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 77.6441 ms
+2023-09-26 23:12:43.065 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 79.0933ms
+2023-09-26 23:13:34.192 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 150
+2023-09-26 23:13:34.202 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:34.215 +03:30 [INF] Route matched with {action = "CreateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:13:34.265 +03:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-09-26 23:13:34.272 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) in 56.6549ms
+2023-09-26 23:13:34.272 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:34.272 +03:30 [INF] HTTP POST /ChargeStation/CreateChargeStation responded 400 in 79.5370 ms
+2023-09-26 23:13:34.273 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 150 - 400 - application/problem+json;+charset=utf-8 81.0415ms
+2023-09-26 23:13:44.348 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132
+2023-09-26 23:13:44.349 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:44.349 +03:30 [INF] Route matched with {action = "CreateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:13:44.394 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:13:44.399 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:13:44.736 +03:30 [INF] Executed DbCommand (91ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ChargeStations] ([CreatedDateUtc], [GroupId], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ChargeStations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:13:44.796 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 401.3404ms.
+2023-09-26 23:13:44.796 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.CreateUpdateChargeStationResponseDto'.
+2023-09-26 23:13:44.803 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) in 453.9412ms
+2023-09-26 23:13:44.804 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:44.804 +03:30 [INF] HTTP POST /ChargeStation/CreateChargeStation responded 200 in 455.1303 ms
+2023-09-26 23:13:44.804 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132 - 200 - application/json;+charset=utf-8 455.8179ms
+2023-09-26 23:13:57.513 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/1 - -
+2023-09-26 23:13:57.516 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:57.523 +03:30 [INF] Route matched with {action = "GetChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:13:57.561 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:13:57.566 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:13:57.602 +03:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDateUtc], [t].[GroupId], [t].[LastModifiedDateUtc], [t].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+    FROM [ChargeStations] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Connectors] AS [c0] ON [t].[Id] = [c0].[ChargeStationId]
+ORDER BY [t].[Id], [c0].[Id]
+2023-09-26 23:13:57.604 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 43.3826ms.
+2023-09-26 23:13:57.605 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto'.
+2023-09-26 23:13:57.605 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) in 82.3728ms
+2023-09-26 23:13:57.605 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:13:57.605 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStation/1 responded 200 in 91.1169 ms
+2023-09-26 23:13:57.607 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/1 - - - 200 - application/json;+charset=utf-8 93.8464ms
+2023-09-26 23:14:17.059 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132
+2023-09-26 23:14:17.060 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:17.071 +03:30 [INF] Route matched with {action = "CreateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:14:17.125 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:14:17.125 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:14:17.130 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ChargeStations] ([CreatedDateUtc], [GroupId], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ChargeStations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:14:17.132 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.3823ms.
+2023-09-26 23:14:17.132 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.CreateUpdateChargeStationResponseDto'.
+2023-09-26 23:14:17.132 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) in 61.1072ms
+2023-09-26 23:14:17.132 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:17.132 +03:30 [INF] HTTP POST /ChargeStation/CreateChargeStation responded 200 in 72.0412 ms
+2023-09-26 23:14:17.133 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132 - 200 - application/json;+charset=utf-8 73.6023ms
+2023-09-26 23:14:23.740 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132
+2023-09-26 23:14:23.740 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:23.740 +03:30 [INF] Route matched with {action = "CreateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:14:23.782 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:14:23.782 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:14:23.792 +03:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ChargeStations] ([CreatedDateUtc], [GroupId], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ChargeStations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:14:23.794 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.0305ms.
+2023-09-26 23:14:23.794 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.CreateUpdateChargeStationResponseDto'.
+2023-09-26 23:14:23.794 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) in 53.936ms
+2023-09-26 23:14:23.795 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:23.795 +03:30 [INF] HTTP POST /ChargeStation/CreateChargeStation responded 200 in 54.4083 ms
+2023-09-26 23:14:23.795 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 132 - 200 - application/json;+charset=utf-8 55.1050ms
+2023-09-26 23:14:31.182 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:14:31.182 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:31.182 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:14:31.238 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:14:31.239 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:14:31.255 +03:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:14:31.256 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 17.725ms.
+2023-09-26 23:14:31.257 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:14:31.259 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 76.6837ms
+2023-09-26 23:14:31.259 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:31.263 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 80.5874 ms
+2023-09-26 23:14:31.273 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 81.4973ms
+2023-09-26 23:14:57.462 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/ChargeStation/DeleteChargeStation/2 - -
+2023-09-26 23:14:57.463 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:14:57.515 +03:30 [INF] Route matched with {action = "DeleteChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteChargeStationAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:14:57.566 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:15:11.774 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:15:11.814 +03:30 [INF] Executed DbCommand (31ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDateUtc], [t].[GroupId], [t].[LastModifiedDateUtc], [t].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+    FROM [ChargeStations] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Connectors] AS [c0] ON [t].[Id] = [c0].[ChargeStationId]
+ORDER BY [t].[Id], [c0].[Id]
+2023-09-26 23:15:15.931 +03:30 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ChargeStations]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:15:22.645 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25079.1726ms.
+2023-09-26 23:15:22.646 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.DeleteChargeStationResponseDto'.
+2023-09-26 23:15:25.192 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi) in 27676.0924ms
+2023-09-26 23:15:25.192 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:15:25.192 +03:30 [INF] HTTP DELETE /ChargeStation/DeleteChargeStation/2 responded 200 in 27728.7892 ms
+2023-09-26 23:15:25.193 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/ChargeStation/DeleteChargeStation/2 - - - 200 - application/json;+charset=utf-8 27730.3133ms
+2023-09-26 23:15:55.971 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:15:55.971 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:15:55.972 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:15:55.998 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:15:55.999 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:15:56.005 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:15:56.005 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.6961ms.
+2023-09-26 23:15:56.005 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:15:56.006 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 34.0197ms
+2023-09-26 23:15:56.006 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:15:56.006 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 34.7243 ms
+2023-09-26 23:15:56.008 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 37.4060ms
+2023-09-26 23:18:07.380 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/ChargeStation/UpdateChargeStation application/json 145
+2023-09-26 23:18:07.381 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.UpdateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:07.388 +03:30 [INF] Route matched with {action = "UpdateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:18:07.441 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.UpdateChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:18:07.450 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:18:07.481 +03:30 [INF] Executed DbCommand (13ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [ChargeStations] SET [CreatedDateUtc] = @p0, [GroupId] = @p1, [LastModifiedDateUtc] = @p2, [Name] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2023-09-26 23:18:07.482 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.UpdateChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.1055ms.
+2023-09-26 23:18:07.483 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.CreateUpdateChargeStationResponseDto'.
+2023-09-26 23:18:07.484 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.UpdateChargeStationAsync (ChargeStation.WebApi) in 96.0423ms
+2023-09-26 23:18:07.484 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.UpdateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:07.484 +03:30 [INF] HTTP PUT /ChargeStation/UpdateChargeStation responded 200 in 103.6499 ms
+2023-09-26 23:18:07.485 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/ChargeStation/UpdateChargeStation application/json 145 - 200 - application/json;+charset=utf-8 105.2116ms
+2023-09-26 23:18:29.454 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/2 - -
+2023-09-26 23:18:29.455 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:29.455 +03:30 [INF] Route matched with {action = "GetChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:18:29.480 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:18:29.481 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:18:29.487 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDateUtc], [t].[GroupId], [t].[LastModifiedDateUtc], [t].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+    FROM [ChargeStations] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Connectors] AS [c0] ON [t].[Id] = [c0].[ChargeStationId]
+ORDER BY [t].[Id], [c0].[Id]
+2023-09-26 23:18:29.487 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 6.9005ms.
+2023-09-26 23:18:29.491 +03:30 [INF] Executing JsonResult, writing value of type 'null'.
+2023-09-26 23:18:29.493 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) in 37.3313ms
+2023-09-26 23:18:29.493 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:29.493 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStation/2 responded 404 in 38.0282 ms
+2023-09-26 23:18:29.494 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/2 - - - 404 - application/json;+charset=utf-8 39.9444ms
+2023-09-26 23:18:36.010 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/3 - -
+2023-09-26 23:18:36.010 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:36.010 +03:30 [INF] Route matched with {action = "GetChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:18:36.043 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:18:36.043 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:18:36.048 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDateUtc], [t].[GroupId], [t].[LastModifiedDateUtc], [t].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+    FROM [ChargeStations] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Connectors] AS [c0] ON [t].[Id] = [c0].[ChargeStationId]
+ORDER BY [t].[Id], [c0].[Id]
+2023-09-26 23:18:36.054 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.9554ms.
+2023-09-26 23:18:36.062 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto'.
+2023-09-26 23:18:36.063 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi) in 52.8259ms
+2023-09-26 23:18:36.064 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:36.064 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStation/3 responded 200 in 53.9931 ms
+2023-09-26 23:18:36.064 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStation/3 - - - 200 - application/json;+charset=utf-8 54.6222ms
+2023-09-26 23:18:47.559 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:18:47.561 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:47.561 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:18:47.592 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:18:47.593 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:18:47.603 +03:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:18:47.604 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11.1064ms.
+2023-09-26 23:18:47.604 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:18:47.605 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 43.8729ms
+2023-09-26 23:18:47.605 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:18:47.605 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 45.8216 ms
+2023-09-26 23:18:47.606 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 46.5614ms
+2023-09-26 23:19:13.507 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133
+2023-09-26 23:19:13.507 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:19:13.514 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:19:13.550 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:19:13.554 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:19:13.689 +03:30 [ERR] Failed executing DbCommand (81ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:19:13.860 +03:30 [ERR] An exception occurred in the database while saving changes for context type 'ChargeStation.Infrastructure.Persistance.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Connectors_ChargeStations_ChargeStationId". The conflict occurred in database "ChargeStationDb", table "dbo.ChargeStations", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:198c58e3-7f88-432b-84a4-4e1c14496c6e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Connectors_ChargeStations_ChargeStationId". The conflict occurred in database "ChargeStationDb", table "dbo.ChargeStations", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:198c58e3-7f88-432b-84a4-4e1c14496c6e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-09-26 23:19:14.272 +03:30 [ERR] An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Connectors_ChargeStations_ChargeStationId". The conflict occurred in database "ChargeStationDb", table "dbo.ChargeStations", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:198c58e3-7f88-432b-84a4-4e1c14496c6e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ChargeStation.Infrastructure.Persistance.EfRepository`1.AddAsync(T entity) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Infrastructure\Persistance\EfRepository.cs:line 55
+   at ChargeStation.Application.Services.ConnectorService.CreateConnectorAsync(ConnectorEntity chargeStation) in C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.Application\Services\ConnectorService.cs:line 29
+2023-09-26 23:19:14.282 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 731.4154ms.
+2023-09-26 23:19:14.282 +03:30 [INF] Executing JsonResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:19:14.284 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 769.8718ms
+2023-09-26 23:19:14.284 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:19:14.285 +03:30 [ERR] HTTP POST /Connector/CreateConnector responded 500 in 777.6790 ms
+2023-09-26 23:19:14.298 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133 - 500 - application/json;+charset=utf-8 791.0628ms
+2023-09-26 23:19:49.193 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133
+2023-09-26 23:19:49.194 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:19:49.194 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:19:49.236 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:19:49.237 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:19:49.244 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:19:49.258 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.1699ms.
+2023-09-26 23:19:49.258 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:19:49.260 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 65.6067ms
+2023-09-26 23:19:49.260 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:19:49.260 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 66.1973 ms
+2023-09-26 23:19:49.261 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133 - 200 - application/json;+charset=utf-8 67.8640ms
+2023-09-26 23:20:27.917 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 135
+2023-09-26 23:20:27.925 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:20:27.925 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:20:27.953 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:20:27.953 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:20:27.967 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:20:27.976 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.883ms.
+2023-09-26 23:20:27.976 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:20:27.983 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 58.0848ms
+2023-09-26 23:20:27.983 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:20:27.985 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 67.1147 ms
+2023-09-26 23:20:27.986 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 135 - 200 - application/json;+charset=utf-8 68.9154ms
+2023-09-26 23:20:33.338 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:20:33.339 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:20:33.340 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:20:33.384 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:20:33.386 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:20:33.397 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:20:33.398 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.2686ms.
+2023-09-26 23:20:33.399 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:20:33.401 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 60.8776ms
+2023-09-26 23:20:33.401 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:20:33.401 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 61.5600 ms
+2023-09-26 23:20:33.401 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 63.4855ms
+2023-09-26 23:21:48.701 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 182
+2023-09-26 23:21:48.701 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:21:48.716 +03:30 [INF] Route matched with {action = "UpdateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:21:48.725 +03:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-09-26 23:21:48.726 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi) in 9.9429ms
+2023-09-26 23:21:48.726 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:21:48.726 +03:30 [INF] HTTP PUT /Connector/UpdateConnector responded 400 in 25.0300 ms
+2023-09-26 23:21:48.736 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 182 - 400 - application/problem+json;+charset=utf-8 35.2742ms
+2023-09-26 23:23:44.835 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 182
+2023-09-26 23:23:44.836 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:23:44.844 +03:30 [INF] Route matched with {action = "UpdateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:23:44.847 +03:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-09-26 23:23:44.847 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi) in 2.8248ms
+2023-09-26 23:23:44.848 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:23:44.848 +03:30 [INF] HTTP PUT /Connector/UpdateConnector responded 400 in 11.5818 ms
+2023-09-26 23:23:44.849 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 182 - 400 - application/problem+json;+charset=utf-8 14.3273ms
+2023-09-26 23:24:01.108 +03:30 [INF] Request starting HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 146
+2023-09-26 23:24:01.108 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:01.108 +03:30 [INF] Route matched with {action = "UpdateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:24:01.171 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:24:16.500 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:24:16.554 +03:30 [INF] Executed DbCommand (23ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Connectors] SET [AmpsMaxCurrent] = @p0, [ChargeStationId] = @p1, [CreatedDateUtc] = @p2, [LastModifiedDateUtc] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2023-09-26 23:24:19.740 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18568.571ms.
+2023-09-26 23:24:19.740 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:24:23.329 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi) in 22220.3292ms
+2023-09-26 23:24:23.329 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.UpdateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:23.329 +03:30 [INF] HTTP PUT /Connector/UpdateConnector responded 200 in 22220.8055 ms
+2023-09-26 23:24:23.329 +03:30 [INF] Request finished HTTP/2 PUT https://localhost:44352/Connector/UpdateConnector application/json 146 - 200 - application/json;+charset=utf-8 22221.2664ms
+2023-09-26 23:24:36.254 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 134
+2023-09-26 23:24:36.254 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:36.254 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:24:36.281 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:24:36.282 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:24:36.287 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:24:36.290 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8.117ms.
+2023-09-26 23:24:36.290 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:24:36.290 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 35.9952ms
+2023-09-26 23:24:36.290 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:36.291 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 36.4965 ms
+2023-09-26 23:24:36.293 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 134 - 200 - application/json;+charset=utf-8 39.4526ms
+2023-09-26 23:24:47.309 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/Connector/DeleteConnector/4 - -
+2023-09-26 23:24:47.311 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.DeleteConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:47.328 +03:30 [INF] Route matched with {action = "DeleteConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteConnectorAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:24:47.348 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.DeleteConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:24:47.350 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:24:47.366 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+WHERE [c].[Id] = @__id_0
+2023-09-26 23:24:47.370 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Connectors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:24:47.371 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.DeleteConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.0415ms.
+2023-09-26 23:24:47.371 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.DeleteConnectorResponseDto'.
+2023-09-26 23:24:47.372 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.DeleteConnectorAsync (ChargeStation.WebApi) in 43.913ms
+2023-09-26 23:24:47.372 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.DeleteConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:47.372 +03:30 [INF] HTTP DELETE /Connector/DeleteConnector/4 responded 200 in 62.7246 ms
+2023-09-26 23:24:47.372 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/Connector/DeleteConnector/4 - - - 200 - application/json;+charset=utf-8 63.3427ms
+2023-09-26 23:24:53.187 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:24:53.187 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:53.187 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:24:53.210 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:24:53.210 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:24:53.215 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:24:53.216 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.6954ms.
+2023-09-26 23:24:53.216 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:24:53.216 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 28.7886ms
+2023-09-26 23:24:53.216 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:24:53.216 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 29.1209 ms
+2023-09-26 23:24:53.217 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 29.5698ms
+2023-09-26 23:25:08.962 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/ChargeStation/DeleteChargeStation/3 - -
+2023-09-26 23:25:08.963 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:08.963 +03:30 [INF] Route matched with {action = "DeleteChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteChargeStationAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:25:08.989 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:25:08.990 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:25:09.002 +03:30 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedDateUtc], [t].[GroupId], [t].[LastModifiedDateUtc], [t].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM (
+    SELECT TOP(1) [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+    FROM [ChargeStations] AS [c]
+    WHERE [c].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [Connectors] AS [c0] ON [t].[Id] = [c0].[ChargeStationId]
+ORDER BY [t].[Id], [c0].[Id]
+2023-09-26 23:25:09.031 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Connectors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:25:09.031 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Connectors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:25:09.041 +03:30 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ChargeStations]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2023-09-26 23:25:09.050 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.3011ms.
+2023-09-26 23:25:09.050 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.DeleteChargeStationResponseDto'.
+2023-09-26 23:25:09.051 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi) in 87.4968ms
+2023-09-26 23:25:09.051 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.DeleteChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:09.051 +03:30 [INF] HTTP DELETE /ChargeStation/DeleteChargeStation/3 responded 200 in 88.4815 ms
+2023-09-26 23:25:09.051 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/ChargeStation/DeleteChargeStation/3 - - - 200 - application/json;+charset=utf-8 88.9950ms
+2023-09-26 23:25:13.139 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:25:13.140 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:13.140 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:25:13.166 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:25:13.167 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:25:13.172 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:25:13.173 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.7272ms.
+2023-09-26 23:25:13.173 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:25:13.174 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 33.4124ms
+2023-09-26 23:25:13.174 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:13.174 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 34.2140 ms
+2023-09-26 23:25:13.174 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 35.0576ms
+2023-09-26 23:25:26.662 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:25:26.662 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:26.662 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:25:26.687 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:25:26.687 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:25:26.693 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:25:26.694 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.5167ms.
+2023-09-26 23:25:26.694 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:25:26.696 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 33.4479ms
+2023-09-26 23:25:26.696 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:25:26.696 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 33.9233 ms
+2023-09-26 23:25:26.696 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 34.5357ms
+2023-09-26 23:26:00.076 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/2 - -
+2023-09-26 23:26:00.086 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:00.097 +03:30 [INF] Route matched with {action = "DeleteGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 23:26:00.142 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:00.147 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:00.171 +03:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 23:26:00.191 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ChargeStations]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:26:00.200 +03:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Groups]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2023-09-26 23:26:00.202 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.2441ms.
+2023-09-26 23:26:00.202 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.DeleteGroupResponseDto'.
+2023-09-26 23:26:00.204 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) in 106.9121ms
+2023-09-26 23:26:00.204 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:00.204 +03:30 [INF] HTTP DELETE /Group/DeleteGroup/2 responded 200 in 126.3243 ms
+2023-09-26 23:26:00.213 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/2 - - - 200 - application/json;+charset=utf-8 137.1751ms
+2023-09-26 23:26:05.002 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:26:05.002 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:05.002 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:26:05.027 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:05.028 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:05.033 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:26:05.033 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.6517ms.
+2023-09-26 23:26:05.033 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:26:05.034 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 31.1185ms
+2023-09-26 23:26:05.034 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:05.034 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 31.9371 ms
+2023-09-26 23:26:05.036 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 33.7236ms
+2023-09-26 23:26:25.018 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Group/GetGroups - -
+2023-09-26 23:26:25.020 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:25.020 +03:30 [INF] Route matched with {action = "GetGroups", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetGroupsAsync() on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 23:26:25.057 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:25.058 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:25.063 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM [Groups] AS [g]
+LEFT JOIN [ChargeStations] AS [c] ON [g].[Id] = [c].[GroupId]
+ORDER BY [g].[Id], [c].[Id]
+2023-09-26 23:26:25.066 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8.2054ms.
+2023-09-26 23:26:25.066 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.GroupEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:26:25.067 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi) in 46.4975ms
+2023-09-26 23:26:25.067 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.GetGroupsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:25.067 +03:30 [INF] HTTP GET /Group/GetGroups responded 200 in 48.3059 ms
+2023-09-26 23:26:25.068 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Group/GetGroups - - - 200 - application/json;+charset=utf-8 49.3509ms
+2023-09-26 23:26:37.018 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 135
+2023-09-26 23:26:37.018 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:37.018 +03:30 [INF] Route matched with {action = "CreateChargeStation", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateChargeStationAsync(ChargeStation.WebApi.Models.Dtos.ChargeStation.ChargeStationDto) on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:26:37.043 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:37.043 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:37.049 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ChargeStations] ([CreatedDateUtc], [GroupId], [LastModifiedDateUtc], [Name])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ChargeStations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:26:37.050 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.0087ms.
+2023-09-26 23:26:37.050 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.ChargeStation.CreateUpdateChargeStationResponseDto'.
+2023-09-26 23:26:37.051 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi) in 32.5536ms
+2023-09-26 23:26:37.051 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.CreateChargeStationAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:37.051 +03:30 [INF] HTTP POST /ChargeStation/CreateChargeStation responded 200 in 33.3945 ms
+2023-09-26 23:26:37.052 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/ChargeStation/CreateChargeStation application/json 135 - 200 - application/json;+charset=utf-8 33.9284ms
+2023-09-26 23:26:43.996 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:26:43.996 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:43.997 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:26:44.024 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:44.025 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:44.028 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:26:44.029 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.7161ms.
+2023-09-26 23:26:44.029 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:26:44.029 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 32.5074ms
+2023-09-26 23:26:44.029 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:44.029 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 32.9759 ms
+2023-09-26 23:26:44.030 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 - application/json;+charset=utf-8 33.5018ms
+2023-09-26 23:26:58.743 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 134
+2023-09-26 23:26:58.743 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:58.743 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:26:58.770 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:26:58.770 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:26:58.775 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:26:58.776 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.605ms.
+2023-09-26 23:26:58.777 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:26:58.777 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 34.0554ms
+2023-09-26 23:26:58.778 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:26:58.778 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 34.5754 ms
+2023-09-26 23:26:58.779 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 134 - 200 - application/json;+charset=utf-8 35.7834ms
+2023-09-26 23:27:07.324 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 136
+2023-09-26 23:27:07.325 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:07.325 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:27:07.351 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:27:07.351 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:27:07.356 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:27:07.358 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.9827ms.
+2023-09-26 23:27:07.358 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:27:07.359 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 33.707ms
+2023-09-26 23:27:07.359 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:07.359 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 34.1432 ms
+2023-09-26 23:27:07.359 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 136 - 200 - application/json;+charset=utf-8 34.7563ms
+2023-09-26 23:27:13.270 +03:30 [INF] Request starting HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133
+2023-09-26 23:27:13.270 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:13.270 +03:30 [INF] Route matched with {action = "CreateConnector", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateConnectorAsync(ChargeStation.WebApi.Models.Dtos.Connector.ConnectorDto) on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:27:13.342 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:27:13.343 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:27:13.349 +03:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Connectors] ([AmpsMaxCurrent], [ChargeStationId], [CreatedDateUtc], [LastModifiedDateUtc])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Connectors]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-09-26 23:27:13.350 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.6346ms.
+2023-09-26 23:27:13.350 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Connector.CreateUpdateConnectorResponseDto'.
+2023-09-26 23:27:13.351 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi) in 80.938ms
+2023-09-26 23:27:13.351 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.CreateConnectorAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:13.351 +03:30 [INF] HTTP POST /Connector/CreateConnector responded 200 in 81.2648 ms
+2023-09-26 23:27:13.351 +03:30 [INF] Request finished HTTP/2 POST https://localhost:44352/Connector/CreateConnector application/json 133 - 200 - application/json;+charset=utf-8 81.6778ms
+2023-09-26 23:27:19.761 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:27:19.762 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:19.762 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:27:19.791 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:27:19.791 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:27:19.794 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:27:19.797 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.8454ms.
+2023-09-26 23:27:19.797 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:27:19.798 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 36.0753ms
+2023-09-26 23:27:19.799 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:19.799 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 37.3150 ms
+2023-09-26 23:27:19.800 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 - application/json;+charset=utf-8 38.2597ms
+2023-09-26 23:27:23.708 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:27:23.708 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:23.708 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:27:23.730 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:27:23.730 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:27:23.735 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:27:23.735 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.1609ms.
+2023-09-26 23:27:23.735 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:27:23.742 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 33.7698ms
+2023-09-26 23:27:23.742 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:27:23.742 +03:30 [ERR] HTTP GET /ChargeStation/GetChargeStations responded 500 in 34.5487 ms
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|21_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-09-26 23:27:23.780 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|21_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-26 23:27:23.831 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 500 - text/plain 123.6998ms
+2023-09-26 23:35:09.140 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 23:35:09.195 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 23:35:09.215 +03:30 [INF] Hosting environment: Development
+2023-09-26 23:35:09.215 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 23:35:09.983 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 738.8385ms
+2023-09-26 23:35:10.556 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 23:35:10.566 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 8.9701ms
+2023-09-26 23:35:10.692 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 23:35:10.760 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.9457ms
+2023-09-26 23:35:12.121 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 23:35:12.349 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 228.2027ms
+2023-09-26 23:35:46.838 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:35:46.907 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:35:46.952 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:35:47.302 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:35:47.998 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:35:50.481 +03:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:35:50.538 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3226.0594ms.
+2023-09-26 23:35:50.549 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:35:50.991 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 4032.7779ms
+2023-09-26 23:35:50.992 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:35:50.995 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 4143.5378 ms
+2023-09-26 23:35:50.999 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 508 application/json;+charset=utf-8 4161.7118ms
+2023-09-26 23:35:58.834 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:35:58.838 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:35:58.843 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:35:58.893 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:35:58.926 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:35:59.103 +03:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:35:59.118 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 224.386ms.
+2023-09-26 23:35:59.118 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:36:54.209 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-26 23:36:54.321 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/index.html - -
+2023-09-26 23:36:54.379 +03:30 [INF] Hosting environment: Development
+2023-09-26 23:36:54.380 +03:30 [INF] Content root path: C:\Users\amirs\source\repos\ChargeStation\src\ChargeStation.WebApi
+2023-09-26 23:36:55.918 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/index.html - - - 200 - text/html;charset=utf-8 1587.4369ms
+2023-09-26 23:36:55.985 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - -
+2023-09-26 23:36:56.025 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 27.1396ms
+2023-09-26 23:36:56.100 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/_vs/browserLink - -
+2023-09-26 23:36:56.208 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 108.3201ms
+2023-09-26 23:36:58.275 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - -
+2023-09-26 23:36:58.525 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 249.3656ms
+2023-09-26 23:38:59.662 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:38:59.748 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:38:59.811 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:39:00.316 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:39:01.541 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:39:03.484 +03:30 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:39:03.568 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3233.6328ms.
+2023-09-26 23:39:03.584 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:39:03.885 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 4066.28ms
+2023-09-26 23:39:03.887 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:03.892 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 4213.8532 ms
+2023-09-26 23:39:03.899 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 622 application/json;+charset=utf-8 4236.6078ms
+2023-09-26 23:39:35.472 +03:30 [INF] Request starting HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/4 - -
+2023-09-26 23:39:35.482 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:35.507 +03:30 [INF] Route matched with {action = "DeleteGroup", controller = "Group"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteGroupAsync(System.Nullable`1[System.Int32]) on controller ChargeStation.WebApi.Controllers.GroupController (ChargeStation.WebApi).
+2023-09-26 23:39:35.558 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:39:35.617 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:39:35.725 +03:30 [INF] Executed DbCommand (61ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmpsCapacity], [t].[CreatedDateUtc], [t].[LastModifiedDateUtc], [t].[Name], [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name]
+FROM (
+    SELECT TOP(1) [g].[Id], [g].[AmpsCapacity], [g].[CreatedDateUtc], [g].[LastModifiedDateUtc], [g].[Name]
+    FROM [Groups] AS [g]
+    WHERE [g].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [ChargeStations] AS [c] ON [t].[Id] = [c].[GroupId]
+ORDER BY [t].[Id], [c].[Id]
+2023-09-26 23:39:36.081 +03:30 [INF] Executed DbCommand (95ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ChargeStations]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2023-09-26 23:39:36.112 +03:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Groups]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2023-09-26 23:39:36.149 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 590.5932ms.
+2023-09-26 23:39:36.150 +03:30 [INF] Executing OkObjectResult, writing value of type 'ChargeStation.WebApi.Models.Dtos.Group.DeleteGroupResponseDto'.
+2023-09-26 23:39:36.155 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi) in 648.3973ms
+2023-09-26 23:39:36.156 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.GroupController.DeleteGroupAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:36.156 +03:30 [INF] HTTP DELETE /Group/DeleteGroup/4 responded 200 in 682.5513 ms
+2023-09-26 23:39:36.156 +03:30 [INF] Request finished HTTP/2 DELETE https://localhost:44352/Group/DeleteGroup/4 - - - 200 31 application/json;+charset=utf-8 684.6108ms
+2023-09-26 23:39:40.242 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - -
+2023-09-26 23:39:40.245 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:40.246 +03:30 [INF] Route matched with {action = "GetChargeStations", controller = "ChargeStation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetChargeStationsAsync() on controller ChargeStation.WebApi.Controllers.ChargeStationController (ChargeStation.WebApi).
+2023-09-26 23:39:40.287 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:39:40.294 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:39:40.303 +03:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDateUtc], [c].[GroupId], [c].[LastModifiedDateUtc], [c].[Name], [c0].[Id], [c0].[AmpsMaxCurrent], [c0].[ChargeStationId], [c0].[CreatedDateUtc], [c0].[LastModifiedDateUtc]
+FROM [ChargeStations] AS [c]
+LEFT JOIN [Connectors] AS [c0] ON [c].[Id] = [c0].[ChargeStationId]
+ORDER BY [c].[Id], [c0].[Id]
+2023-09-26 23:39:40.303 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.138ms.
+2023-09-26 23:39:40.303 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ChargeStationEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:39:40.304 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi) in 57.6726ms
+2023-09-26 23:39:40.304 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ChargeStationController.GetChargeStationsAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:40.304 +03:30 [INF] HTTP GET /ChargeStation/GetChargeStations responded 200 in 61.3764 ms
+2023-09-26 23:39:40.304 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/ChargeStation/GetChargeStations - - - 200 2 application/json;+charset=utf-8 61.9364ms
+2023-09-26 23:39:47.056 +03:30 [INF] Request starting HTTP/2 GET https://localhost:44352/Connector/GetConnectors - -
+2023-09-26 23:39:47.057 +03:30 [INF] Executing endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:47.061 +03:30 [INF] Route matched with {action = "GetConnectors", controller = "Connector"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectorsAsync() on controller ChargeStation.WebApi.Controllers.ConnectorController (ChargeStation.WebApi).
+2023-09-26 23:39:47.110 +03:30 [INF] Executing action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) - Validation state: "Valid"
+2023-09-26 23:39:47.113 +03:30 [INF] Entity Framework Core 5.0.17 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ChargeStation.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-09-26 23:39:47.124 +03:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AmpsMaxCurrent], [c].[ChargeStationId], [c].[CreatedDateUtc], [c].[LastModifiedDateUtc]
+FROM [Connectors] AS [c]
+2023-09-26 23:39:47.124 +03:30 [INF] Executed action method ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13.7601ms.
+2023-09-26 23:39:47.125 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ChargeStation.Domain.Entities.ConnectorEntity, ChargeStation.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-26 23:39:47.125 +03:30 [INF] Executed action ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi) in 64.1892ms
+2023-09-26 23:39:47.125 +03:30 [INF] Executed endpoint 'ChargeStation.WebApi.Controllers.ConnectorController.GetConnectorsAsync (ChargeStation.WebApi)'
+2023-09-26 23:39:47.125 +03:30 [INF] HTTP GET /Connector/GetConnectors responded 200 in 69.0899 ms
+2023-09-26 23:39:47.126 +03:30 [INF] Request finished HTTP/2 GET https://localhost:44352/Connector/GetConnectors - - - 200 2 application/json;+charset=utf-8 70.0980ms
