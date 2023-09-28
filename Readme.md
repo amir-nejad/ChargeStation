@@ -6,28 +6,24 @@ The charging station includes a unique identifier (unchangeable), name (changeab
 
 The connector contains the ID (unchangeable/unique per charging station with possible values between 1 and 5) and the maximum current in amps (changeable / value greater than 0).
 
-+-----------------+          1       +-----------+
-|   ChargeStation |-----------------|  Group    |
-+-----------------+ 1      *       +-----------+
-|                 |                 |           |
-| - group: Group  |<---------------| - stations: List<ChargeStation>  
-| - connectors: List<Connector>    |
-+-----------------+                 |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    |
-                                    v
-+----------------+
-|   Connector    |
-+----------------+
-|                |
-| - chargeStation: ChargeStation |
-+----------------+
+```mermaid
+classDiagram
+  class Group {
+    + stations: List<ChargeStation>
+  }
+
+  class ChargeStation {
+    - group: Group
+    - connectors: List<Connector>
+  }
+
+  class Connector {
+    - chargeStation: ChargeStation
+  }
+
+  Group --|> ChargeStation : contains
+  ChargeStation *--o Connector : has
+```
 
 
 Regarding the performance of the project, it should be said that the charging station exists only in one group and no connector is without a charging station. Whenever a group is deleted, all the charging stations in the group are also deleted and only one station can be deleted or registered from the group in each request.
