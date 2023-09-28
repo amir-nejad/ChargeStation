@@ -1,4 +1,5 @@
 ﻿using ChargeStation.WebApi.Models.Dtos.Connector;
+using ChargeStation.WebApi.Models.Dtos.Group;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
@@ -12,7 +13,10 @@ namespace ChargeStation.WebApi.Models.Dtos.ChargeStation
         [JsonProperty("groupId")]
         public int GroupId { get; set; }
 
-        [JsonProperty("ampsCapacity")]
+        [JsonProperty("group")]
+        public GroupDto Group { get; set; }
+
+        [JsonProperty("connectors")]
         public IList<ConnectorDto> Connectors { get; set; }
     }
 }

@@ -14,12 +14,14 @@ namespace ChargeStation.WebApi.Controllers
     public class ConnectorController : ControllerBase
     {
         private readonly IConnectorService _connectorService;
+        private readonly IChargeStationService _chargeStationService;
         private readonly ILogger _logger;
 
-        public ConnectorController(IConnectorService connectorService, ILogger logger)
+        public ConnectorController(IConnectorService connectorService, ILogger logger, IChargeStationService chargeStationService)
         {
             _connectorService = connectorService;
             _logger = logger;
+            _chargeStationService = chargeStationService;
         }
 
         [HttpGet]
@@ -56,13 +58,33 @@ namespace ChargeStation.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateConnectorAsync([FromBody] ConnectorDto connector)
         {
+            if (connector is null)
+                return BadRequest();
+            
+            var response = new CreateUpdateConnectorResponseDto();
+
+            var chargeStation = await _chargeStationService.GetChargeStationByIdAsync(connector.ChargeStationId);
+
+            if (chargeStation is null)
+                return BadRequest();
+
+            // Validating the maximum amount of charge station children. (Max is 5)
+            if (chargeStation.Connectors is not null && chargeStation.Connectors.Count + 1 > 5)
+            {
+                Response.StatusCode = StatusCodes.Status403Forbidden;
+
+                response.Success = false;
+                response.Message = "Cannot add more connector to the choiced Charge Station. Please remove other connectors if you want to add a new one.";
+
+                return new JsonResult(response);
+            }
+
             var connectorEntity = new ConnectorEntity()
             {
                 AmpsMaxCurrent = connector.AmpsMaxCurrent,
                 ChargeStationId = connector.ChargeStationId,
             };
 
-            var response = new CreateUpdateConnectorResponseDto();
 
             await _connectorService.CreateConnectorAsync(connectorEntity);
 

@@ -3,7 +3,6 @@ using ChargeStation.Domain.Entities;
 using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChargeStation.Application.Services
@@ -38,15 +37,17 @@ namespace ChargeStation.Application.Services
         // Get by Id
         public async Task<GroupEntity> GetGroupByIdAsync(int id)
         {
-            return await _repository
-                .GetByIdAsync(id, x => x.ChargeStations);
+            return await _repository.GetByIdAsync(id,
+                                                  nameof(GroupEntity.ChargeStations),
+                                                  "ChargeStations.Connectors"); ;
         }
 
         // Get list
         public async Task<IList<GroupEntity>> GetGroupsAsync()
         {
             return (IList<GroupEntity>)await _repository
-                .GetAllAsync(x => x.ChargeStations);
+                .GetAllAsync(nameof(GroupEntity.ChargeStations),
+                             "ChargeStations.Connectors");
         }
 
         // Update
@@ -69,7 +70,7 @@ namespace ChargeStation.Application.Services
             {
                 var chargeStation = await GetGroupByIdAsync(id);
 
-                if(chargeStation is null)
+                if (chargeStation is null)
                     throw new KeyNotFoundException(nameof(chargeStation));
 
                 await _repository.DeleteAsync(chargeStation);

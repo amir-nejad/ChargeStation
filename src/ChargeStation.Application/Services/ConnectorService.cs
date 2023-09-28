@@ -1,5 +1,6 @@
 ﻿using ChargeStation.Application.Interfaces;
 using ChargeStation.Domain.Entities;
+using ChargeStation.Domain.Events;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -22,11 +23,12 @@ namespace ChargeStation.Application.Services
         }
 
         // Create
-        public async Task CreateConnectorAsync(ConnectorEntity chargeStation)
+        public async Task CreateConnectorAsync(ConnectorEntity connector)
         {
             try
             {
-                await _repository.AddAsync(chargeStation);
+                connector.DomainEvents.Add(new ConnectorCreatedUpdatedEvent(connector));
+                await _repository.AddAsync(connector);
             }
             catch (Exception ex)
             {
@@ -37,7 +39,7 @@ namespace ChargeStation.Application.Services
         // Get by Id
         public async Task<ConnectorEntity> GetConnectorByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id, new string[] { });
         }
 
         // Get list
@@ -47,11 +49,11 @@ namespace ChargeStation.Application.Services
         }
 
         // Update
-        public async Task UpdateConnectorAsync(ConnectorEntity chargeStation)
+        public async Task UpdateConnectorAsync(ConnectorEntity connector)
         {
             try
             {
-                await _repository.UpdateAsync(chargeStation);
+                await _repository.UpdateAsync(connector);
             }
             catch (Exception ex)
             {
@@ -64,12 +66,12 @@ namespace ChargeStation.Application.Services
         {
             try
             {
-                var chargeStation = await GetConnectorByIdAsync(id);
+                var connector = await GetConnectorByIdAsync(id);
 
-                if(chargeStation is null)
-                    throw new KeyNotFoundException(nameof(chargeStation));
+                if(connector is null)
+                    throw new KeyNotFoundException(nameof(connector));
 
-                await _repository.DeleteAsync(chargeStation);
+                await _repository.DeleteAsync(connector);
             }
             catch (Exception ex)
             {

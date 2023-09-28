@@ -63,6 +63,14 @@ namespace ChargeStation.WebApi.Controllers
                         CreatedDateUtc = connectorEntity.CreatedDateUtc,
                         LastModifiedDateUtc = connectorEntity.LastModifiedDateUtc,
                         Id = connectorEntity.Id,
+                        ChargeStation = new ChargeStationDto()
+                        {
+                            Name = connectorEntity.ChargeStation.Name,
+                            CreatedDateUtc = connectorEntity.ChargeStation.CreatedDateUtc,
+                            LastModifiedDateUtc = connectorEntity.ChargeStation.LastModifiedDateUtc,
+                            GroupId = connectorEntity.ChargeStation.GroupId,
+                            Id = connectorEntity.ChargeStation.Id
+                        }
                     });
                 }
             }

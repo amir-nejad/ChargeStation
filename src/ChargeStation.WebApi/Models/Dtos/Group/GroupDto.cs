@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using ChargeStation.WebApi.Models.Dtos.ChargeStation;
+using Newtonsoft.Json;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ChargeStation.WebApi.Models.Dtos.Group
 {
@@ -9,5 +12,8 @@ namespace ChargeStation.WebApi.Models.Dtos.Group
 
         [JsonProperty("ampsCapacity")]
         public int AmpsCapacity { get; set; }
+
+        [JsonProperty("chargeStations")]
+        public IList<ChargeStationDto> ChargeStations { get; set; }
     }
 }

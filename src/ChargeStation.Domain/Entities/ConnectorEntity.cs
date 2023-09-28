@@ -1,8 +1,9 @@
 ﻿using ChargeStation.Domain.Common;
+using System.Collections.Generic;
 
 namespace ChargeStation.Domain.Entities
 {
-    public class ConnectorEntity : BaseEntity
+    public class ConnectorEntity : BaseEntity, IHasDomainEvent
     {
         public ConnectorEntity() { }
 
@@ -11,5 +12,7 @@ namespace ChargeStation.Domain.Entities
         public int ChargeStationId { get; set; }
 
         public ChargeStationEntity ChargeStation { get; set; }
+
+        public List<DomainEvent> DomainEvents { get; set; } = new List<DomainEvent>();
     }
 }

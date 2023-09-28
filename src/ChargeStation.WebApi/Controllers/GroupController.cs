@@ -1,11 +1,13 @@
 ﻿using ChargeStation.Application.Interfaces;
-using ChargeStation.Application.Services;
 using ChargeStation.Domain.Entities;
+using ChargeStation.WebApi.Models.Dtos.ChargeStation;
+using ChargeStation.WebApi.Models.Dtos.Connector;
 using ChargeStation.WebApi.Models.Dtos.Group;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChargeStation.WebApi.Controllers
@@ -51,6 +53,22 @@ namespace ChargeStation.WebApi.Controllers
             response.AmpsCapacity = groupEntity.AmpsCapacity;
             response.CreatedDateUtc = groupEntity.CreatedDateUtc;
             response.LastModifiedDateUtc = groupEntity.LastModifiedDateUtc;
+            response.ChargeStations = groupEntity.ChargeStations.Select(cs => new ChargeStationDto()
+            {
+                Id = cs.Id,
+                Name = cs.Name,
+                GroupId = cs.GroupId,
+                CreatedDateUtc = cs.CreatedDateUtc,
+                LastModifiedDateUtc = cs.LastModifiedDateUtc,
+                Connectors = cs.Connectors.Select(c => new ConnectorDto()
+                {
+                    Id = c.Id,
+                    ChargeStationId = cs.Id,
+                    AmpsMaxCurrent = c.AmpsMaxCurrent,
+                    CreatedDateUtc = c.CreatedDateUtc,
+                    LastModifiedDateUtc = c.LastModifiedDateUtc
+                }).ToList()
+            }).ToList();
 
             return Ok(response);
         }
@@ -94,7 +112,24 @@ namespace ChargeStation.WebApi.Controllers
 
             var response = new CreateUpdateGroupResponseDto();
 
-            var groupEntity = new GroupEntity()
+            var groupEntity = await _groupService.GetGroupByIdAsync(group.Id.Value);
+
+            if (groupEntity is null)
+                return NotFound();
+
+            var connectorsAmpsMaxCurrentSum = groupEntity.ChargeStations.Sum(cs => cs.Connectors.Sum(c => c.AmpsMaxCurrent));
+
+            if (group.AmpsCapacity < connectorsAmpsMaxCurrentSum)
+            {
+                Response.StatusCode = StatusCodes.Status403Forbidden;
+
+                response.Success = false;
+                response.Message = "The Amps Capacity of a Group cannot be smaller than all childre'n connectors.";
+
+                return new JsonResult(response);
+            }
+
+            groupEntity = new GroupEntity()
             {
                 Id = group.Id.Value,
                 AmpsCapacity = group.AmpsCapacity,

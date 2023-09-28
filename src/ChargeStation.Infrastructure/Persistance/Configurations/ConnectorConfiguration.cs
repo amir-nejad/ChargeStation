@@ -8,6 +8,8 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<ConnectorEntity> builder)
         {
+            builder.Ignore(x => x.DomainEvents);
+
             builder.ToTable("Connectors");
 
             builder

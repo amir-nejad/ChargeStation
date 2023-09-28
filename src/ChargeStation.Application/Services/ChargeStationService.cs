@@ -37,13 +37,13 @@ namespace ChargeStation.Application.Services
         // Get by Id
         public async Task<ChargeStationEntity> GetChargeStationByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id, x => x.Connectors);
+            return await _repository.GetByIdAsync(id, nameof(ChargeStationEntity.Group), nameof(ChargeStationEntity.Connectors));
         }
 
         // Get list
         public async Task<IList<ChargeStationEntity>> GetChargeStationsAsync()
         {
-            return (IList<ChargeStationEntity>)await _repository.GetAllAsync(x => x.Connectors);
+            return (IList<ChargeStationEntity>)await _repository.GetAllAsync(nameof(ChargeStationEntity.Group), nameof(ChargeStationEntity.Connectors));
         }
 
         // Update
