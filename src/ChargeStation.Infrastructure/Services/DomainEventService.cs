@@ -2,7 +2,7 @@
 using ChargeStation.Application.Models;
 using ChargeStation.Domain.Common;
 using MediatR;
-using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Threading.Tasks;
 
@@ -10,10 +10,10 @@ namespace ChargeStation.Infrastructure.Services
 {
     public class DomainEventService : IDomainEventService
     {
-        private readonly ILogger<DomainEventService> _logger;
+        private readonly ILogger _logger;
         private readonly IPublisher _mediator;
 
-        public DomainEventService(ILogger<DomainEventService> logger, IPublisher mediator)
+        public DomainEventService(ILogger logger, IPublisher mediator)
         {
             _logger = logger;
             _mediator = mediator;
@@ -21,7 +21,7 @@ namespace ChargeStation.Infrastructure.Services
 
         public async Task Publish(DomainEvent domainEvent)
         {
-            _logger.LogInformation("Publishing domain event. Event - {event}", domainEvent.GetType().Name);
+            _logger.Information("Publishing domain event. Event - {event}", domainEvent.GetType().Name);
             await _mediator.Publish(GetNotificationCorrespondingToDomainEvent(domainEvent));
         }
 

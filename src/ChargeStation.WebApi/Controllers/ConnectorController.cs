@@ -81,8 +81,11 @@ namespace ChargeStation.WebApi.Controllers
 
             var connectorEntity = new ConnectorEntity()
             {
+                Id = connector.Id ?? 0,
                 AmpsMaxCurrent = connector.AmpsMaxCurrent,
                 ChargeStationId = connector.ChargeStationId,
+                CreatedDateUtc = connector.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = connector.LastModifiedDateUtc ?? DateTime.UtcNow
             };
 
 
@@ -117,9 +120,10 @@ namespace ChargeStation.WebApi.Controllers
             var connectorEntity = new ConnectorEntity()
             {
                 Id = connector.Id.Value,
-                CreatedDateUtc = connector.CreatedDateUtc.GetValueOrDefault(),
                 AmpsMaxCurrent = connector.AmpsMaxCurrent,
-                ChargeStationId = connector.ChargeStationId
+                ChargeStationId = connector.ChargeStationId,
+                CreatedDateUtc = connector.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = connector.LastModifiedDateUtc ?? DateTime.UtcNow
             };
 
             await _connectorService.UpdateConnectorAsync(connectorEntity);

@@ -1,5 +1,6 @@
 ﻿using ChargeStation.Application.Interfaces;
 using ChargeStation.Domain.Common;
+using ChargeStation.Domain.Entities;
 using ChargeStation.Infrastructure.Persistance.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,10 @@ namespace ChargeStation.Infrastructure.Persistance
         {
             _domainEventService = domainEventService;
         }
+
+        public DbSet<GroupEntity> Groups { get; set; }
+        public DbSet<ChargeStationEntity> ChargeStations { get; set; }
+        public DbSet<ConnectorEntity> Connectors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

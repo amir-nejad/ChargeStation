@@ -53,14 +53,14 @@ namespace ChargeStation.WebApi.Controllers
             response.AmpsCapacity = groupEntity.AmpsCapacity;
             response.CreatedDateUtc = groupEntity.CreatedDateUtc;
             response.LastModifiedDateUtc = groupEntity.LastModifiedDateUtc;
-            response.ChargeStations = groupEntity.ChargeStations.Select(cs => new ChargeStationDto()
+            response.ChargeStations = groupEntity.ChargeStations?.Select(cs => new ChargeStationDto()
             {
                 Id = cs.Id,
                 Name = cs.Name,
                 GroupId = cs.GroupId,
                 CreatedDateUtc = cs.CreatedDateUtc,
                 LastModifiedDateUtc = cs.LastModifiedDateUtc,
-                Connectors = cs.Connectors.Select(c => new ConnectorDto()
+                Connectors = cs.Connectors?.Select(c => new ConnectorDto()
                 {
                     Id = c.Id,
                     ChargeStationId = cs.Id,
@@ -78,8 +78,11 @@ namespace ChargeStation.WebApi.Controllers
         {
             var groupEntity = new GroupEntity()
             {
+                Id = group.Id ?? 0,
                 AmpsCapacity = group.AmpsCapacity,
                 Name = group.Name,
+                CreatedDateUtc = group.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = group.LastModifiedDateUtc ?? DateTime.UtcNow,
             };
 
             var response = new CreateUpdateGroupResponseDto();
@@ -117,7 +120,7 @@ namespace ChargeStation.WebApi.Controllers
             if (groupEntity is null)
                 return NotFound();
 
-            var connectorsAmpsMaxCurrentSum = groupEntity.ChargeStations.Sum(cs => cs.Connectors.Sum(c => c.AmpsMaxCurrent));
+            int connectorsAmpsMaxCurrentSum = groupEntity.ChargeStations?.Sum(cs => cs.Connectors?.Sum(c => c.AmpsMaxCurrent)) ?? 0;
 
             if (group.AmpsCapacity < connectorsAmpsMaxCurrentSum)
             {
@@ -134,7 +137,8 @@ namespace ChargeStation.WebApi.Controllers
                 Id = group.Id.Value,
                 AmpsCapacity = group.AmpsCapacity,
                 Name = group.Name,
-                CreatedDateUtc = group.CreatedDateUtc.GetValueOrDefault()
+                CreatedDateUtc = group.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = group.LastModifiedDateUtc ?? DateTime.UtcNow,
             };
 
             await _groupService.UpdateGroupAsync(groupEntity);

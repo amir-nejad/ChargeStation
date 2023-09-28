@@ -10,7 +10,7 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
         {
             builder.Ignore(x => x.DomainEvents);
 
-            builder.ToTable("Connectors");
+            //builder.ToTable("Connectors");
 
             builder
                 .HasKey(x => x.Id);

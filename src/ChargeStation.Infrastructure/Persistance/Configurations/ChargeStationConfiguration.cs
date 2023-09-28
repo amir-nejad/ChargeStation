@@ -8,7 +8,7 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<ChargeStationEntity> builder)
         {
-            builder.ToTable("ChargeStations");
+            //builder.ToTable("ChargeStations");
 
             builder
                 .HasKey(x => x.Id);

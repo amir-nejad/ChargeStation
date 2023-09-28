@@ -83,8 +83,11 @@ namespace ChargeStation.WebApi.Controllers
         {
             var chargeStationEntity = new ChargeStationEntity()
             {
+                Id = chargeStation.Id ?? 0,
                 GroupId = chargeStation.GroupId,
                 Name = chargeStation.Name,
+                CreatedDateUtc = chargeStation.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = chargeStation.LastModifiedDateUtc ?? DateTime.UtcNow,
             };
 
             var response = new CreateUpdateChargeStationResponseDto();
@@ -122,7 +125,8 @@ namespace ChargeStation.WebApi.Controllers
                 Id = chargeStation.Id.Value,
                 Name = chargeStation.Name,
                 GroupId = chargeStation.GroupId,
-                CreatedDateUtc = chargeStation.CreatedDateUtc.GetValueOrDefault()
+                CreatedDateUtc = chargeStation.CreatedDateUtc ?? DateTime.UtcNow,
+                LastModifiedDateUtc = chargeStation.LastModifiedDateUtc ?? DateTime.UtcNow,
             };
 
             await _chargeStationService.UpdateChargeStationAsync(chargeStationEntity);
