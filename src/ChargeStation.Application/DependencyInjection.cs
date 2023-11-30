@@ -1,6 +1,5 @@
 ﻿using ChargeStation.Application.Interfaces;
 using ChargeStation.Application.Services;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using System.Reflection;

@@ -8,7 +8,7 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<GroupEntity> builder)
         {
-            //builder.ToTable("Groups");
+            builder.ToTable(x => x.HasCheckConstraint("CK_Groups_AmpsCapacity", "AmpsCapacity >= 0"));
 
             builder
                 .HasKey(x => x.Id);
@@ -32,7 +32,6 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
                 .HasForeignKey(x => x.GroupId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasCheckConstraint("CK_Groups_AmpsCapacity", "AmpsCapacity >= 0");
         }
     }
 }

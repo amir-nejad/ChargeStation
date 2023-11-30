@@ -10,7 +10,7 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
         {
             builder.Ignore(x => x.DomainEvents);
 
-            //builder.ToTable("Connectors");
+            builder.ToTable(x => x.HasCheckConstraint("CK_Connectors_AmpsMaxCurrent", "AmpsMaxCurrent >= 0"));
 
             builder
                 .HasKey(x => x.Id);
@@ -24,7 +24,6 @@ namespace ChargeStation.Infrastructure.Persistance.Configurations
                 .Property(x => x.AmpsMaxCurrent)
                 .IsRequired();
 
-            builder.HasCheckConstraint("CK_Connectors_AmpsMaxCurrent", "AmpsMaxCurrent >= 0");
         }
     }
 }
